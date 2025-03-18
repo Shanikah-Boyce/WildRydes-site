@@ -1,10 +1,8 @@
 # Building Wild Rydes: A Serverless Unicorn Ride-Sharing Web Application
-Certainly! I'll add the mention of **IAM roles** where relevant in the system architecture section and ensure that it's well integrated. Here's the revised version with **IAM roles** included:
-
 ---
 
 ### **Project Overview**
-The *Wild Rydes* project reimagines the AWS Serverless Workshop app, leveraging AWS’s serverless ecosystem to create a scalable, cost-efficient, and feature-rich ride-sharing application. The website, including HTML, CSS, and ArcGIS integration, was provided as part of the AWS workshop tutorial. This allowed me to focus primarily on building and configuring the serverless backend. The app enables users to sign up, log in, and interact with the interactive map powered by ArcGIS to request rides, offering hands-on experience with AWS services like Cognito, Lambda, and Amplify.
+The *Wild Rydes* project reimagines the AWS Serverless Workshop app, leveraging AWS’s serverless ecosystem to create a scalable, cost-efficient and feature-rich ride-sharing application. The website, including HTML, CSS, javascript and ArcGIS integration, was provided as part of the tinytechnicaltutorials guidance. This allowed me to focus primarily on building and configuring the serverless backend. The app enables users to sign up, log in, and interact with the interactive map powered by ArcGIS to request rides, offering hands-on experience with AWS services like Cognito, Lambda, and Amplify.
 
 ---
 
