@@ -1,39 +1,50 @@
 # Building Wild Rydes: A Serverless Unicorn Ride-Sharing Web Application
 
-This project is a recreation of the Wild Rydes ride-sharing app from the original [Amazon serverless workshop](https://aws.amazon.com/serverless-workshops/). The app leverages modern tools and AWS services to create a serverless unicorn ride-sharing service where users can request rides through an interactive map powered by ArcGIS. The repository showcases the completed app, built following a tutorial from [TinyTechnicalTutorials](https://youtu.be/K6v6t5z6AsU?si=tDEysyOLwFF7SD6D).
+The Wild Rydes project is a recreation of the original Wild Rydes ride-sharing app from the [Amazon serverless workshop](https://aws.amazon.com/serverless-workshops/). The objective was to utilize AWS's serverless architecture to create a scalable, cost-efficient, and robust unicorn ride-sharing application. This project enabled me to deepen my understanding of serverless architecture and gain hands-on experience with various AWS services such as Cognito, Lambda, and Amplify. The repository showcases the completed app, built following a tutorial from [TinyTechnicalTutorials](https://youtu.be/K6v6t5z6AsU?si=tDEysyOLwFF7SD6D).
 
 ![image](https://github.com/user-attachments/assets/efbfa338-8b3d-453d-b1a8-2093cacb472f)
 
-## Project Goals
-The primary objectives of this project were to deepen my understanding of serverless architecture and to create a unique, functional web application. Through this project, I gained hands-on experience with a range of AWS services and explored real-time processing, user authentication, and scalable design principles. Wild Rydes serves as a demonstration of how serverless solutions can be leveraged to build robust applications that are both cost-effective and efficient.
+## Project Objectives
+The main goal of this project was to build a serverless ride-sharing platform where users could securely create accounts, log in, and interact with an ArcGIS-powered map to request rides. The platform had to provide a seamless, responsive user experience while ensuring backend scalability and cost-efficiency.
 
-## User Experience and Functionality
-The application provides a seamless and intuitive user experience. Users can securely create accounts and log in via AWS Cognito, allowing them to interact with a dynamic ArcGIS-powered map to request rides. AWS Lambda is used for real-time ride processing, ensuring quick response times, while the overall application is built on a serverless architecture to optimize efficiency and scalability. Additionally, AWS Amplify integrates with GitHub for version control and continuous integration/continuous delivery (CI/CD), streamlining the development and deployment process.
+To achieve this, I focused on:
+- Leveraging AWS services to manage authentication, processing and data storage in a serverless environment.
+- Implementing real-time ride requests with AWS Lambda.
+- Integrating ArcGIS for interactive map features.
+- Ensuring scalability and performance using serverless tools like AWS Amplify and DynamoDB.
+
+## System Design & Implementation
+The application was built using a combination of AWS services to support the serverless architecture:
+- Authentication: AWS Cognito was used for user registration, login, and authentication to ensure secure access.
+- Backend Processing: AWS Lambda was employed to handle ride requests and process user data without the need for dedicated servers.
+- API Communication: API Gateway facilitated communication between the frontend and backend, connecting users to the Lambda functions.
+- Data Storage: DynamoDB was chosen for its low-latency, scalable storage to hold ride data and user details.
+- Map Integration: ArcGIS powered the dynamic, interactive map interface where users could request rides.
+- CI/CD Pipeline: AWS Amplify was integrated with GitHub to manage the continuous integration and deployment of the application, ensuring efficient updates.
+The front-end and back-end services were connected through APIs, enabling smooth communication for real-time ride requests. Amplify played a crucial role in managing the deployment process, allowing the application to be updated automatically as new changes were pushed to the repository.
 
 ![Rocinante in Toronto](https://github.com/user-attachments/assets/60ee783b-4dc6-4fd8-ae15-36a60839ebef)
 
 *Rocinante, the majestic unicorn, was summoned to the bustling cityscape of Toronto, Canada.*
 
+## Challenges & Solutions
+While developing Wild Rydes, I encountered several challenges:
+- Learning AWS Amplify’s New UI: The redesigned Amplify interface initially seemed overwhelming, but I overcame this by reading documentation and experimenting with the platform’s features.
+- Lambda Timeouts: Ensuring that Lambda functions executed quickly enough to process ride requests in real time was a key hurdle. I optimized the Lambda functions to handle requests efficiently by reducing the processing time and adjusting timeout settings.
+- Integration with ArcGIS: Ensuring smooth communication between the interactive map and the backend was a challenge. By fine-tuning the integration, I ensured accurate real-time updates on the user’s location and ride request status.
+These challenges were valuable learning experiences, helping me refine my understanding of serverless technologies and their application in real-world scenarios.
 
-## Technical Architecture
-The application's design relies on multiple AWS services, which work together seamlessly:
-- AWS IAM manages secure access across resources.
-- AWS Cognito enables secure user authentication.
-- AWS Lambda handles backend logic and real-time processing.
-- API Gateway facilitates communication between the front-end and back-end.
-- DynamoDB stores user and ride data with low latency.
-This robust architecture ensures reliability, scalability, and cost-effectiveness.
+## Key Takeaways
+- Serverless Design Benefits: I gained a deeper appreciation for the advantages of serverless architecture, especially in terms of scalability and cost-effectiveness. With AWS Lambda, I was able to handle backend processing without worrying about server maintenance or provisioning.
+- Authentication & Security: AWS Cognito simplified user authentication and management, providing robust security features with minimal configuration
+- Handling Real-Time Data: AWS Lambda and DynamoDB allowed the application to process and store real-time data efficiently, even under variable load conditions.
+Next time, I would focus on optimizing database queries in DynamoDB to further improve performance during demand spikes and refine the UI/UX to make it more intuitive for users.
 
-## Challenges and Solutions
-One of the key challenges I faced was adjusting to the redesigned AWS Amplify user interface (UI). However, with persistence and a willingness to explore its features, I gradually developed a deeper understanding and became more proficient.
-
-## Performance and Scalability
-The serverless approach ensures efficient performance and seamless scalability. AWS Lambda processes requests in real time, while the pay-as-you-go model minimizes operational costs. The architecture effectively handles demand spikes, showcasing the practicality of serverless solutions in real-world applications.
-
-## Conclusion
-Wild Rydes exemplifies how serverless architecture enables the development of scalable and efficient applications. Inspired by the AWS Serverless Workshop, as adapted by TinyTechnicalTutorials, this project provided valuable experience in AWS services while overcoming technical challenges. Its innovative design highlights the possibilities of modern development practices, even when based on a now-unavailable resource.
-
-
+## Project Deliverables
+- Fully Functional Web Application: A ride-sharing app with user authentication, an interactive map, and real-time ride requests powered by AWS Lambda.
+- Source Code: Available on GitHub, demonstrating the use of AWS services in a serverless application.
+- Architecture Documentation: Detailed overview of how the AWS services were integrated and how they work together to provide the serverless solution.
+- CI/CD Pipeline: A working deployment pipeline integrated with AWS Amplify and GitHub to automate updates and streamline development.
 
 /////
 ## The Application Code
