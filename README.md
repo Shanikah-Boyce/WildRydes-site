@@ -1,77 +1,55 @@
 # Building Wild Rydes: A Serverless Unicorn Ride-Sharing Web Application
----
 
 ### Project Overview
-The *Wild Rydes* project reimagines the [AWS Serverless Workshop application](https://aws.amazon.com/serverless-workshops/), utilizing AWS’s serverless ecosystem to build a scalable, cost-effective and feature-rich ride-sharing platform. The website and its dependencies were provided as part of the [Tiny Technical Tutorials guide](https://github.com/tinytechnicaltutorials/wildrydes-site), allowing me to focus on designing and configuring the serverless backend. The application enables users to register, log in and interact with an ArcGIS-powered interactive map to request rides. This hands-on project offered valuable experience with AWS services such as Cognito, Lambda and Amplify.
+The *Wild Rydes* project reimagines the [AWS Serverless Workshop application](https://aws.amazon.com/serverless-workshops/), using AWS’s serverless ecosystem to create a scalable, cost-effective ride-sharing platform. The website and dependencies were sourced from the [Tiny Technical Tutorials guide](https://github.com/tinytechnicaltutorials/wildrydes-site), allowing focus on designing the serverless backend. The app enables users to register, log in and request rides via an ArcGIS-powered map.
 
-### Project Objectives
-The primary goal of this project was to build a fully serverless ride-sharing application that is secure, scalable, and cost-effective. To achieve this, I implemented AWS Cognito for user authentication, ensuring a smooth and secure login process. AWS Lambda was utilized for processing real-time ride requests, with the Lambda code provided as part of the tutorial. This allowed me to concentrate on integrating the serverless architecture, while ensuring that the app could process ride requests dynamically. By using a serverless approach, I minimized operational costs and enabled the app to scale efficiently without relying on traditional infrastructure. Additionally, I integrated AWS Amplify to establish a CI/CD pipeline, ensuring continuous deployment and smooth updates, all while maintaining version control through GitHub.
-
----
+#### Project Goals
+The goal was to build a secure, scalable, and cost-effective serverless application, minimizing operational costs and enabling efficient scaling without traditional infrastructure.
+This project provided valuable experience with AWS services like Cognito, Lambda and Amplify.
 
 ### **System Architecture**
 To meet the objectives outlined above, I designed a robust serverless architecture using the following AWS services:
-
 - **AWS Cognito**: Managed user authentication and secure access control.
 - **AWS Lambda**: The provided Lambda code handled backend logic and ride request processing, enabling me to focus on configuring the serverless infrastructure rather than writing the code from scratch.
 - **API Gateway**: Facilitated communication between the frontend and backend.
 - **DynamoDB**: Stored user and ride data with low-latency access.
-- **ArcGIS**: The interactive map, included in the AWS workshop, allowed users to view their location and request rides in real-time.
 - **AWS Amplify**: Enabled continuous deployment and integration, linked with GitHub for seamless updates.
 - **AWS IAM (Identity and Access Management)**: IAM roles and policies were used to securely manage permissions and access to the various AWS services in the project. I created IAM roles to assign appropriate permissions for the Lambda functions, API Gateway, and other AWS resources. These roles ensured that only authorized services could access sensitive data, thereby maintaining secure communication and operations between the components.
-
 These services worked together to create a secure, cost-efficient, and scalable architecture that met the app's needs.
 
----
-
 ### **Challenges Faced**
-As with any project, there were several challenges:
+I encountered an issue with AWS Cognito while setting up user authentication. I selected email as the sign-in identifier but had trouble logging in using an email address on the website. After some investigation, I realized that I needed to choose username as the primary sign-in attribute instead.
 
-- **Navigating AWS Amplify’s Interface**: The new interface initially felt overwhelming, but with thorough documentation and hands-on exploration, I was able to configure the CI/CD pipeline effectively.
-- **Setting Up IAM Roles and Permissions**: While configuring IAM roles, it was essential to ensure the right permissions were granted for each AWS service. I had to carefully configure IAM roles for Lambda functions, API Gateway, and other services, which initially posed a challenge, but with research and trial and error, I successfully ensured secure and efficient access control.
+In Cognito, when username is selected, users can sign in with their email, phone, or a custom username, depending on what they provided. By changing the sign-in attribute to username, I was able to resolve the issue, allowing users to log in using their email address, phone number, or a custom username.
 
-These challenges provided valuable learning experiences, teaching me more about serverless architectures, cloud services, and the importance of careful optimization.
+This experience taught me to pay close attention to the sign-in configuration settings in Cognito, to avoid misconfigurations and ensure a smooth user experience.
+![image](https://github.com/user-attachments/assets/a3d4ccab-7413-43e6-8ccf-20637d2e480c)
 
----
 
 ### **Key Takeaways**
-Key lessons learned from this project include:
-
-- **Serverless Scalability**: AWS Lambda and DynamoDB played an essential role in building a scalable application, eliminating the need for manual infrastructure management.
-- **Simplified Authentication**: AWS Cognito made user authentication and access management straightforward, enabling secure logins with minimal effort.
-- **Real-Time Performance**: Optimizing Lambda functions for real-time processing was crucial for ensuring responsiveness and performance.
-- **CI/CD with Amplify**: Setting up CI/CD pipelines with AWS Amplify significantly improved the development workflow, enabling faster iterations and seamless deployment.
-- **Effective IAM Role Management**: Properly configuring IAM roles and permissions was critical to ensuring that only authorized services had access to necessary resources, thus ensuring the security of the entire application.
-
-In future updates, I would focus on optimizing DynamoDB queries and enhancing the user interface to improve the overall user experience.
-
----
+- Attention to Sign-In Attributes: It’s crucial to properly configure the sign-in attributes in AWS Cognito. Selecting username as the sign-in attribute ensures flexibility for users, allowing them to use their email, phone number or a custom username to log in.
+- Serverless Scalability: AWS Lambda and DynamoDB played an essential role in building a scalable application, eliminating the need for manual infrastructure management.
+- Simplified Authentication: AWS Cognito made user authentication and access management straightforward, enabling secure logins with minimal effort.
+- Real-Time Performance: Optimizing Lambda functions for real-time processing was crucial for ensuring responsiveness and performance.
+- CI/CD with Amplify: Setting up CI/CD pipelines with AWS Amplify significantly improved the development workflow, enabling faster iterations and seamless deployment.
+- Effective IAM Role Management: Properly configuring IAM roles and permissions was critical to ensuring that only authorized services had access to necessary resources, thus ensuring the security of the entire application.
 
 ### **Deliverables**
 The final deliverables for this project include:
-
 - **A Fully Functional Ride-Sharing Web Application**: The app allows users to securely log in, interact with the ArcGIS map, and request rides—all powered by serverless technologies.
 - **GitHub Repository**: The project is open-sourced, demonstrating the integration of AWS services and serverless architecture.
 - **System Architecture Documentation**: Detailed documentation outlining how the AWS services are integrated.
 - **CI/CD Pipeline**: An automated CI/CD pipeline using AWS Amplify, integrated with GitHub for continuous updates.
 
----
+### **Personal Reflection** 
+This project enhanced my understanding of serverless architectures and AWS services, offering hands-on experience with tools like Lambda, Cognito, and DynamoDB to build scalable, real-time applications with minimal infrastructure.  
 
-### **Personal Reflection**
-This project significantly enhanced my understanding of serverless architectures and AWS services. By working with AWS Lambda, Cognito, DynamoDB, and other services, I gained hands-on experience building scalable, real-time applications with minimal infrastructure management. Overcoming challenges like optimizing Lambda functions, working with IAM roles, and integrating ArcGIS provided valuable insights into cloud-native development. I look forward to applying these lessons in future projects and further exploring serverless solutions.
+### **Key Challenges and Insights**  
+Overcoming challenges, such as optimizing Lambda functions and managing IAM roles, provided valuable insights into cloud-native development and strengthened my confidence in using serverless technologies to create secure, cost-efficient solutions. These experiences have inspired me to refine my skills and apply them to more complex projects in the future.
 
----
 
-### **Conclusion**
-This project has reinforced my confidence in using serverless technologies for cloud-native development. The hands-on experience with AWS services like Lambda, Cognito, and DynamoDB has strengthened my understanding of how to create scalable, cost-efficient applications. Moving forward, I plan to continue refining my serverless computing skills and leverage these tools for even more complex projects.
 
 ---
-
-### **Changes Made:**
-1. **Added IAM Role Mention**: IAM roles and permissions have been included to explain how security and access control were handled for AWS resources.
-2. **Clarified Role Configuration**: The challenges section now includes specific information on setting up IAM roles and policies for secure access to resources.
-
-Let me know if you need any additional changes!
 
 ///
 
