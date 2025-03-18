@@ -1,9 +1,8 @@
 # Building Wild Rydes: A Serverless Unicorn Ride-Sharing Web Application
 
 ## Project Overview
-This repository contains a recreation of the Wild Rydes ride-sharing app, originally featured in the [Amazon serverless workshop](https://aws.amazon.com/serverless-workshops/). Following the [TinyTechnicalTutorials](https://youtu.be/K6v6t5z6AsU?si=tDEysyOLwFF7SD6D) YouTube guide, I built and deployed this app using modern tools and best practices. The project is shared here for exploration and contributions.
+This project is a recreation of the Wild Rydes ride-sharing app from the original [Amazon serverless workshop](https://aws.amazon.com/serverless-workshops/). The app leverages modern tools and AWS services to create a serverless unicorn ride-sharing service where users can request rides through an interactive map powered by ArcGIS. The repository showcases the completed app, built following a tutorial from [TinyTechnicalTutorials](https://youtu.be/K6v6t5z6AsU?si=tDEysyOLwFF7SD6D).
 
-Wild Rydes is a whimsical, serverless unicorn ride-sharing application. It enables users to securely sign up, log in, and book magical unicorn rides via an interactive map powered by ArcGIS.
 ![image](https://github.com/user-attachments/assets/efbfa338-8b3d-453d-b1a8-2093cacb472f)
 
 
@@ -16,6 +15,9 @@ Wild Rydes is a whimsical, serverless unicorn ride-sharing application. It enabl
 - DynamoDB: Managed user and ride data with low-latency, highly scalable NoSQL storage.
 
 ////
+## Addressing the Business Problem
+The Wild Rydes app addresses the need for a fun, scalable, and serverless ride-sharing service. By offering unicorn-based rides in an engaging and whimsical environment, the app provides users with an intuitive, real-time platform to request rides. Leveraging serverless technologies ensures that the app can scale effortlessly while keeping costs low and performance high.
+
 
 
 
