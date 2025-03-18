@@ -1,6 +1,9 @@
-# AWS Project - Build a Full End-to-End Web Application with 7 Services | Step-by-Step Tutorial
+# Building Wild Rydes: A Serverless Unicorn Ride-Sharing Web Application
 
-This repo contains the code files used in this [YouTube video](https://youtu.be/K6v6t5z6AsU).
+## Project Overview
+This project is based on the [Amazon workshop](https://aws.amazon.com/serverless-workshops/) for creating the Wild Rydes ride-sharing app. I recreated it by following a tutorial from [TinyTechnicalTutorials](https://youtu.be/K6v6t5z6AsU?si=tDEysyOLwFF7SD6D) on YouTube, which helped me build and deploy the app using modern tools and best practices. This repository contains the completed project for others to explore.
+
+
 
 ## TL;DR
 We're creating a web application for a unicorn ride-sharing service called Wild Rydes (from the original [Amazon workshop](https://aws.amazon.com/serverless-workshops)).  The app uses IAM, Amplify, Cognito, Lambda, API Gateway and DynamoDB, with code stored in GitHub and incorporated into a CI/CD pipeline with Amplify.
