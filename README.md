@@ -15,6 +15,8 @@ To meet the objectives outlined above, I designed a robust serverless architectu
 - **DynamoDB**: Stored user and ride data with low-latency access.
 - **AWS Amplify**: Enabled continuous deployment and integration, linked with GitHub for seamless updates.
 - **AWS IAM (Identity and Access Management)**: IAM roles and policies were used to securely manage permissions and access to the various AWS services in the project. I created IAM roles to assign appropriate permissions for the Lambda functions, API Gateway, and other AWS resources. These roles ensured that only authorized services could access sensitive data, thereby maintaining secure communication and operations between the components.
+  ![image](https://github.com/user-attachments/assets/ecc2bc44-7ad6-481e-922a-ee29d777de5c)
+
 These services worked together to create a secure, cost-efficient, and scalable architecture that met the app's needs.
 
 ### **Challenges Faced**
