@@ -2,6 +2,8 @@
 
 ### Project Overview
 The *Wild Rydes* project reimagines the [AWS Serverless Workshop application](https://aws.amazon.com/serverless-workshops/), using AWS’s serverless ecosystem to create a scalable, cost-effective ride-sharing platform. The website and dependencies were sourced from the [Tiny Technical Tutorials guide](https://github.com/tinytechnicaltutorials/wildrydes-site), allowing focus on designing the serverless backend. The app enables users to register, log in and request rides via an ArcGIS-powered map.
+![Front-end UI](https://github.com/user-attachments/assets/9e5782d9-b921-471d-ae7e-b61635932cf8)
+*This image demonstrates the front-end functionality provided by AWS tools and ArcGIS.*
 
 #### Project Goals
 The goal was to build a secure, scalable, and cost-effective serverless application, minimizing operational costs and enabling efficient scaling without traditional infrastructure.
