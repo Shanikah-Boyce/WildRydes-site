@@ -1,18 +1,13 @@
 # Building Wild Rydes: A Serverless Unicorn Ride-Sharing Web Application
 
-## Project Overview
 This project is a recreation of the Wild Rydes ride-sharing app from the original [Amazon serverless workshop](https://aws.amazon.com/serverless-workshops/). The app leverages modern tools and AWS services to create a serverless unicorn ride-sharing service where users can request rides through an interactive map powered by ArcGIS. The repository showcases the completed app, built following a tutorial from [TinyTechnicalTutorials](https://youtu.be/K6v6t5z6AsU?si=tDEysyOLwFF7SD6D).
 
 ![image](https://github.com/user-attachments/assets/efbfa338-8b3d-453d-b1a8-2093cacb472f)
 
+## Project Overview
+The Wild Rydes app provides a fun and scalable ride-sharing service where users can create accounts, log in securely, and request unicorn rides. By utilizing AWS services such as IAM, Cognito, Amplify, Lambda, API Gateway, and DynamoDB, the app delivers real-time processing of ride requests while maintaining a serverless architecture for scalability and cost-effectiveness. GitHub is used for version control, and AWS Amplify manages the CI/CD pipeline.
 
-## AWS Services Used
-- IAM (Identity and Access Management): Managed secure access and permissions for AWS resources.
-- Amplify: Simplified front-end development, deployment and CI/CD pipeline integration.
-- Cognito: Handled user authentication and authorization.
-- Lambda: Processed backend logic for ride requests and interactions.
-- API Gateway: Created RESTful APIs for communication between the front-end and back-end.
-- DynamoDB: Managed user and ride data with low-latency, highly scalable NoSQL storage.
+
 
 ////
 ## Addressing the Business Problem
