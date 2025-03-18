@@ -1,12 +1,10 @@
 # Building Wild Rydes: A Serverless Unicorn Ride-Sharing Web Application
 ---
 
-### **Project Overview**
-The *Wild Rydes* project reimagines the AWS Serverless Workshop app, leveraging AWS’s serverless ecosystem to create a scalable, cost-efficient and feature-rich ride-sharing application. The website, including HTML, CSS, javascript and ArcGIS integration, was provided as part of the tinytechnicaltutorials guidance. This allowed me to focus primarily on building and configuring the serverless backend. The app enables users to sign up, log in, and interact with the interactive map powered by ArcGIS to request rides, offering hands-on experience with AWS services like Cognito, Lambda, and Amplify.
+### Project Overview
+The *Wild Rydes* project reimagines the [AWS Serverless Workshop application](https://aws.amazon.com/serverless-workshops/), utilizing AWS’s serverless ecosystem to build a scalable, cost-effective and feature-rich ride-sharing platform. The website and its dependencies were provided as part of the [Tiny Technical Tutorials guide](https://github.com/tinytechnicaltutorials/wildrydes-site), allowing me to focus on designing and configuring the serverless backend. The application enables users to register, log in and interact with an ArcGIS-powered interactive map to request rides. This hands-on project offered valuable experience with AWS services such as Cognito, Lambda and Amplify.
 
----
-
-### **Project Objectives**
+### Project Objectives
 The primary goal of this project was to build a fully serverless ride-sharing application that is secure, scalable, and cost-effective. To achieve this, I implemented AWS Cognito for user authentication, ensuring a smooth and secure login process. AWS Lambda was utilized for processing real-time ride requests, with the Lambda code provided as part of the tutorial. This allowed me to concentrate on integrating the serverless architecture, while ensuring that the app could process ride requests dynamically. By using a serverless approach, I minimized operational costs and enabled the app to scale efficiently without relying on traditional infrastructure. Additionally, I integrated AWS Amplify to establish a CI/CD pipeline, ensuring continuous deployment and smooth updates, all while maintaining version control through GitHub.
 
 ---
