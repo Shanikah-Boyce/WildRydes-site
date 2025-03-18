@@ -7,11 +7,17 @@ This project is a recreation of the Wild Rydes ride-sharing app from the origina
 ## Project Overview
 The Wild Rydes app provides a fun and scalable ride-sharing service where users can create accounts, log in securely, and request unicorn rides. By utilizing AWS services such as IAM, Cognito, Amplify, Lambda, API Gateway, and DynamoDB, the app delivers real-time processing of ride requests while maintaining a serverless architecture for scalability and cost-effectiveness. GitHub is used for version control, and AWS Amplify manages the CI/CD pipeline.
 
+## Business Problem
+The Wild Rydes app addresses the need for a fun, user-friendly, and scalable ride-sharing platform. It allows users to request rides in a whimsical, magical environment while utilizing serverless architecture to ensure smooth, efficient performance without the need for manual server management.
 
+## User Experience (UX)
+The app prioritizes simplicity and engagement:
+- Account Creation & Authentication: Handled securely through Amazon Cognito.
+- Ride Requesting: Users interact with an ArcGIS-powered map to select pickup locations and request rides.
+- Real-Time Processing: Serverless functions ensure instant ride processing without delay.
 
-////
-## Addressing the Business Problem
-The Wild Rydes app addresses the need for a fun, scalable, and serverless ride-sharing service. By offering unicorn-based rides in an engaging and whimsical environment, the app provides users with an intuitive, real-time platform to request rides. Leveraging serverless technologies ensures that the app can scale effortlessly while keeping costs low and performance high.
+![image](https://github.com/user-attachments/assets/60ee783b-4dc6-4fd8-ae15-36a60839ebef)
+Rocinante was called to Toronto Canada
 
 
 
