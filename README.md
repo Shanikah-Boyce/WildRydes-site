@@ -16,8 +16,11 @@ The app prioritizes simplicity and engagement:
 - Ride Requesting: Users interact with an ArcGIS-powered map to select pickup locations and request rides.
 - Real-Time Processing: Serverless functions ensure instant ride processing without delay.
 
-![image](https://github.com/user-attachments/assets/60ee783b-4dc6-4fd8-ae15-36a60839ebef)
-Rocinante was called to Toronto Canada
+![Rocinante in Toronto](https://github.com/user-attachments/assets/60ee783b-4dc6-4fd8-ae15-36a60839ebef)
+
+*Rocinante, the majestic unicorn, was summoned to the bustling cityscape of Toronto, Canada.*
+
+
 
 
 
