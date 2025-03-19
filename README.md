@@ -5,7 +5,7 @@ The *Wild Rydes* project reimagines the [AWS Serverless Workshop application](ht
 ![Front-end UI](https://github.com/user-attachments/assets/9e5782d9-b921-471d-ae7e-b61635932cf8)
 *This image demonstrates the front-end functionality provided by AWS tools and ArcGIS.*
 
-#### Project Goals
+### Project Goals
 The goal was to build a secure, scalable, and cost-effective serverless application, minimizing operational costs and enabling efficient scaling without traditional infrastructure.
 This project provided valuable experience with AWS services like Cognito, Lambda and Amplify.
 
@@ -17,9 +17,10 @@ To meet the objectives outlined above, I designed a robust serverless architectu
 - **DynamoDB**: Stored user and ride data with low-latency access.
 - **AWS Amplify**: Enabled continuous deployment and integration, linked with GitHub for seamless updates.
 - **AWS IAM (Identity and Access Management)**: IAM roles and policies were used to securely manage permissions and access to the various AWS services in the project. I created IAM roles to assign appropriate permissions for the Lambda functions, API Gateway, and other AWS resources. These roles ensured that only authorized services could access sensitive data, thereby maintaining secure communication and operations between the components.
+These services worked together to create a secure, cost-efficient, and scalable architecture that met the app's needs.
   ![image](https://github.com/user-attachments/assets/ecc2bc44-7ad6-481e-922a-ee29d777de5c)
 
-These services worked together to create a secure, cost-efficient, and scalable architecture that met the app's needs.
+
 
 ### **Challenges Faced**
 I encountered an issue with AWS Cognito while setting up user authentication. I selected email as the sign-in identifier but had trouble logging in using an email address on the website. After some investigation, I realized that I needed to choose username as the primary sign-in attribute instead.
