@@ -27,7 +27,7 @@ I encountered an issue with AWS Cognito while setting up user authentication. I 
 In Cognito, when username is selected, users can sign in with their email, phone, or a custom username, depending on what they provided. By changing the sign-in attribute to username, I was able to resolve the issue, allowing users to log in using their email address, phone number, or a custom username.
 
 This experience taught me to pay close attention to the sign-in configuration settings in Cognito, to avoid misconfigurations and ensure a smooth user experience.
-![image](https://github.com/user-attachments/assets/a3d4ccab-7413-43e6-8ccf-20637d2e480c)
+![image](https://github.com/user-attachments/assets/91cad274-ce7c-4733-88d0-7d2f396785aa)
 
 
 ### **Key Takeaways**
@@ -37,6 +37,7 @@ This experience taught me to pay close attention to the sign-in configuration se
 - Real-Time Performance: Optimizing Lambda functions for real-time processing was crucial for ensuring responsiveness and performance.
 - CI/CD with Amplify: Setting up CI/CD pipelines with AWS Amplify significantly improved the development workflow, enabling faster iterations and seamless deployment.
 - Effective IAM Role Management: Properly configuring IAM roles and permissions was critical to ensuring that only authorized services had access to necessary resources, thus ensuring the security of the entire application.
+![lambda_execution_flow](https://github.com/user-attachments/assets/286321c5-c2f3-40f4-ae61-e5abab7165a0)
 
 ### **Deliverables**
 The final deliverables for this project include:
@@ -53,125 +54,4 @@ Overcoming challenges, such as optimizing Lambda functions and managing IAM role
 
 
 
----
-
-///
-
-## The Application Code
-The application code is here in this repository.
-
-## The Lambda Function Code
-Here is the code for the Lambda function, originally taken from the [AWS workshop](https://aws.amazon.com/getting-started/hands-on/build-serverless-web-app-lambda-apigateway-s3-dynamodb-cognito/module-3/ ), and updated for Node 20.x:
-
-```node
-import { randomBytes } from 'crypto';
-import { DynamoDBClient } from '@aws-sdk/client-dynamodb';
-import { DynamoDBDocumentClient, PutCommand } from '@aws-sdk/lib-dynamodb';
-
-const client = new DynamoDBClient({});
-const ddb = DynamoDBDocumentClient.from(client);
-
-const fleet = [
-    { Name: 'Angel', Color: 'White', Gender: 'Female' },
-    { Name: 'Gil', Color: 'White', Gender: 'Male' },
-    { Name: 'Rocinante', Color: 'Yellow', Gender: 'Female' },
-];
-
-export const handler = async (event, context) => {
-    if (!event.requestContext.authorizer) {
-        return errorResponse('Authorization not configured', context.awsRequestId);
-    }
-
-    const rideId = toUrlString(randomBytes(16));
-    console.log('Received event (', rideId, '): ', event);
-
-    const username = event.requestContext.authorizer.claims['cognito:username'];
-    const requestBody = JSON.parse(event.body);
-    const pickupLocation = requestBody.PickupLocation;
-
-    const unicorn = findUnicorn(pickupLocation);
-
-    try {
-        await recordRide(rideId, username, unicorn);
-        return {
-            statusCode: 201,
-            body: JSON.stringify({
-                RideId: rideId,
-                Unicorn: unicorn,
-                Eta: '30 seconds',
-                Rider: username,
-            }),
-            headers: {
-                'Access-Control-Allow-Origin': '*',
-            },
-        };
-    } catch (err) {
-        console.error(err);
-        return errorResponse(err.message, context.awsRequestId);
-    }
-};
-
-function findUnicorn(pickupLocation) {
-    console.log('Finding unicorn for ', pickupLocation.Latitude, ', ', pickupLocation.Longitude);
-    return fleet[Math.floor(Math.random() * fleet.length)];
-}
-
-async function recordRide(rideId, username, unicorn) {
-    const params = {
-        TableName: 'Rides',
-        Item: {
-            RideId: rideId,
-            User: username,
-            Unicorn: unicorn,
-            RequestTime: new Date().toISOString(),
-        },
-    };
-    await ddb.send(new PutCommand(params));
-}
-
-function toUrlString(buffer) {
-    return buffer.toString('base64')
-        .replace(/\+/g, '-')
-        .replace(/\//g, '_')
-        .replace(/=/g, '');
-}
-
-function errorResponse(errorMessage, awsRequestId) {
-    return {
-        statusCode: 500,
-        body: JSON.stringify({
-            Error: errorMessage,
-            Reference: awsRequestId,
-        }),
-        headers: {
-            'Access-Control-Allow-Origin': '*',
-        },
-    };
-}
-```
-
-## The Lambda Function Test Function
-Here is the code used to test the Lambda function:
-
-```json
-{
-    "path": "/ride",
-    "httpMethod": "POST",
-    "headers": {
-        "Accept": "*/*",
-        "Authorization": "eyJraWQiOiJLTzRVMWZs",
-        "content-type": "application/json; charset=UTF-8"
-    },
-    "queryStringParameters": null,
-    "pathParameters": null,
-    "requestContext": {
-        "authorizer": {
-            "claims": {
-                "cognito:username": "the_username"
-            }
-        }
-    },
-    "body": "{\"PickupLocation\":{\"Latitude\":47.6174755835663,\"Longitude\":-122.28837066650185}}"
-}
-```
 
