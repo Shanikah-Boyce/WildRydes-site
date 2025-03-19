@@ -10,18 +10,17 @@ The goal was to build a secure, scalable, and cost-effective serverless applicat
 This project provided valuable experience with AWS services like Cognito, Lambda and Amplify.
 
 ### **System Architecture**
-![image](https://github.com/user-attachments/assets/739a799d-a261-4d94-bfa6-270a96f7d56c)
-
 To meet the objectives outlined above, I designed a robust serverless architecture using the following AWS services:
+![image](https://github.com/user-attachments/assets/20e03c78-50e0-442b-aaa8-678013ba16a2)
 - **AWS Cognito**: Managed user authentication and secure access control.
 - **AWS Lambda**: The provided Lambda code handled backend logic and ride request processing, enabling me to focus on configuring the serverless infrastructure rather than writing the code from scratch.
 - **API Gateway**: Facilitated communication between the frontend and backend.
 - **DynamoDB**: Stored user and ride data with low-latency access.
 - **AWS Amplify**: Enabled continuous deployment and integration, linked with GitHub for seamless updates.
 - **AWS IAM (Identity and Access Management)**: IAM roles and policies were used to securely manage permissions and access to the various AWS services in the project. I created IAM roles to assign appropriate permissions for the Lambda functions, API Gateway, and other AWS resources. These roles ensured that only authorized services could access sensitive data, thereby maintaining secure communication and operations between the components.
-  
+
 These services worked together to create a secure, cost-efficient, and scalable architecture that met the app's needs.
-  ![image](https://github.com/user-attachments/assets/ecc2bc44-7ad6-481e-922a-ee29d777de5c)
+ 
 
 
 
